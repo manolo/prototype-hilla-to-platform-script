@@ -1,4 +1,10 @@
 {
+    "react": {
+        "react-components": {
+            "jsVersion": "24.4.0-alpha5",
+            "npmName": "@vaadin/react-components"
+        }
+    },
     "vaadin": {
         "board": {
             "javaVersion": "24.4.0.alpha2",
