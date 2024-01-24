@@ -45,6 +45,12 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>com.vaadin.hilla</groupId>
+      <artifactId>hilla-dev-mode</artifactId>
+      <version>24.4.0.alpha2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>copilot</artifactId>
       <version>24.3.5</version>
