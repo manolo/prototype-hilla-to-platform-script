@@ -28,78 +28,6 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-testbench-bom</artifactId>
-        <version>${testbench.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-server</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-dev-server</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-lit-template</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-polymer-template</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-push</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-data</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-dnd</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-server-production-mode</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-spring</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-webpush</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>flow-html-components</artifactId>
-        <version>${flow.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin.hilla</groupId>
-        <artifactId>hilla</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
         <groupId>com.vaadin.hilla</groupId>
         <artifactId>hilla-dev</artifactId>
         <version>${project.version}</version>
@@ -118,51 +46,6 @@
         <groupId>com.vaadin.hilla</groupId>
         <artifactId>engine-runtime</artifactId>
         <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin.hilla</groupId>
-        <artifactId>hilla-spring-boot-starter</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.vaadin.hilla</groupId>
-        <artifactId>hilla-react-spring-boot-starter</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>${slf4j.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-simple</artifactId>
-        <version>${slf4j.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-log4j12</artifactId>
-        <version>${slf4j.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-jdk14</artifactId>
-        <version>${slf4j.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-jcl</artifactId>
-        <version>${slf4j.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>net.java.dev.jna</groupId>
-        <artifactId>jna</artifactId>
-        <version>${jna.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>net.java.dev.jna</groupId>
-        <artifactId>jna-platform</artifactId>
-        <version>${jna.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
