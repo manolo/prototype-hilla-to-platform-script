@@ -23,7 +23,7 @@ scr=`readlink -f "$0"`
 dir=`dirname $scr`/hack
 
 mvnInstallFile() {
-  echo "Installing $1 in $L/$3/$version/$1"
+  echo "Installing $1 in $L/$3/$version/"`basename $1`
   mvn -q install:install-file \
     -Dfile=$1 \
     -DpomFile=$2
@@ -127,7 +127,6 @@ for artifact in $artifacts; do
           fi
         fi
       done
-      echo "Creating $file"
     fi
     echo "Creating $file"
     jar -cf ../$file .
