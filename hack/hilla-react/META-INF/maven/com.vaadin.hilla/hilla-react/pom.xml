@@ -5,12 +5,12 @@
   <parent>
     <groupId>com.vaadin.hilla</groupId>
     <artifactId>hilla-project</artifactId>
-    <version>24.4.0.alpha2</version>
+    <version>24.4-SNAPSHOT</version>
     <relativePath>../../../pom.xml</relativePath>
   </parent>
   <groupId>com.vaadin.hilla</groupId>
   <artifactId>hilla-react</artifactId>
-  <version>24.4.0.alpha2</version>
+  <version>24.4-SNAPSHOT</version>
   <name>Hilla Platform for React</name>
   <description>Hilla Platform for React-based Applications</description>
   <url>https://hilla.dev</url>
@@ -28,19 +28,19 @@
     <dependency>
       <groupId>com.vaadin.hilla</groupId>
       <artifactId>endpoint</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.vaadin.hilla</groupId>
       <artifactId>engine-runtime</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.vaadin.hilla</groupId>
       <artifactId>hilla-dev-mode</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>

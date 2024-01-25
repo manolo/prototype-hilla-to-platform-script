@@ -14,7 +14,7 @@ hilla
 vaadin-dev
 "
 
-version="24.4.0.alpha2"
+version="24.4-SNAPSHOT"
 local=~/.m2/repository/com/vaadin
 base=https://tools.vaadin.com/nexus/content/repositories/vaadin-prereleases/com/vaadin
 ns=com.vaadin

@@ -5,11 +5,11 @@
   <parent>
     <groupId>com.vaadin</groupId>
     <artifactId>vaadin-platform-parent</artifactId>
-    <version>24.4.0.alpha2</version>
+    <version>24.4-SNAPSHOT</version>
   </parent>
   <groupId>com.vaadin</groupId>
   <artifactId>vaadin-spring-boot-starter</artifactId>
-  <version>24.4.0.alpha2</version>
+  <version>24.4-SNAPSHOT</version>
   <name>Spring Boot Starter</name>
   <description>Spring Boot Starter for Vaadin Flow applications.</description>
   <licenses>
@@ -34,19 +34,19 @@
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-spring</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-core</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.vaadin.hilla</groupId>
       <artifactId>hilla-react</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

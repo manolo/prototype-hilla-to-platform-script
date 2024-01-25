@@ -5,11 +5,11 @@
   <parent>
     <groupId>com.vaadin</groupId>
     <artifactId>vaadin-platform-parent</artifactId>
-    <version>24.4.0.alpha2</version>
+    <version>24.4-SNAPSHOT</version>
   </parent>
   <groupId>com.vaadin</groupId>
   <artifactId>vaadin-dev</artifactId>
-  <version>24.4.0.alpha2</version>
+  <version>24.4-SNAPSHOT</version>
   <name>Vaadin Platform (vaadin-dev)</name>
   <description>Vaadin Platform (vaadin-dev)</description>
   <url>https://vaadin.com</url>
@@ -35,19 +35,19 @@
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-dev-server</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-dev-bundle</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.vaadin.hilla</groupId>
       <artifactId>hilla-dev-mode</artifactId>
-      <version>24.4.0.alpha2</version>
+      <version>24.4-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

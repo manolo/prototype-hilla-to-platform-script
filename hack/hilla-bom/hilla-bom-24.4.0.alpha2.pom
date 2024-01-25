@@ -5,12 +5,12 @@
   <parent>
     <groupId>com.vaadin.hilla</groupId>
     <artifactId>hilla-project</artifactId>
-    <version>24.4.0.alpha2</version>
+    <version>24.4-SNAPSHOT</version>
     <relativePath>../../../pom.xml</relativePath>
   </parent>
   <groupId>com.vaadin.hilla</groupId>
   <artifactId>hilla-bom</artifactId>
-  <version>24.4.0.alpha2</version>
+  <version>24.4-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Hilla Platform (Bill of Materials)</name>
   <description>Hilla Platform (Bill of Materials)</description>
