@@ -1,6 +1,7 @@
 set -e
 
 artifacts="
+hilla-maven-plugin
 vaadin-spring-boot-starter
 vaadin-bom
 vaadin-core-internal
@@ -12,8 +13,6 @@ hilla-react
 hilla
 vaadin-dev
 "
-
-#hilla-maven-plugin
 
 version="24.4.0.alpha2"
 local=~/.m2/repository/com/vaadin
@@ -42,6 +41,24 @@ computeVars() {
   fi
 }
 
+download() {
+  _file=$1
+  _ext="${_file##*.}"
+  _path=$2
+  _artifact=$3
+  _version=$4
+
+  if expr $_version : ".*SNAPSHOT" > /dev/null; then
+    curl -s -o /tmp/metadata.xml $_path/$_artifact/$_version/maven-metadata.xml
+    stamp=`cat /tmp/metadata.xml  | grep '<value>' | cut -d '>' -f2 | cut -d '<' -f1 | tail -1`
+    f=$_artifact-$stamp.$_ext
+    curl -s -o $_file $_path/$_artifact/$_version/$_artifact-$stamp.$_ext
+  else
+    echo "Downloading $1"
+    curl -s -o $_file $_path/$_artifact/$_version/$_file
+  fi
+}
+
 renameArtifact() {
   echo "Renaming $1 to $2"
   ns1=`echo $1 | cut -d : -f1`
@@ -59,14 +76,17 @@ renameArtifact() {
 
   perl -pi -e 's|artifactId='$art1'|artifactId='$art2'|' META-INF/maven/$ns2/$art2/pom.properties
   perl -pi -e 's|groupId='$ns1'|groupId='$ns2'|' META-INF/maven/$ns2/$art2/pom.properties
+  perl -pi -e 's|m2e.projectName='$art1'|m2e.projectName='$art2'|' META-INF/maven/$ns2/$art2/pom.properties
+
 
   perl -0777 -pi -e 's|(<groupId>)'$ns1'(</groupId>\s*<artifactId>)'$art1'(</artifactId>)|${1}'$ns2'${2}'$art2'${3}|ms' META-INF/maven/$ns2/$art2/pom.xml
+  perl -0777 -pi -e 's|(\s*<artifactId>)'$art1'(</artifactId>\s*<packaging>maven-plugin</packaging>)|<groupId>'$ns2'</groupId>${1}'$art2'${2}|ms' META-INF/maven/$ns2/$art2/pom.xml
+
 }
 
 
 for artifact in $artifacts; do
   cd $dir
-
   computeVars $artifact
 
   echo "Repackaging $artifact $file $folder"
@@ -77,18 +97,18 @@ for artifact in $artifacts; do
 
   if expr $artifact : ".*-bom" > /dev/null; then
     file=$artifact-$version.pom
-    curl -s -o $file $P/$artifact/$version/$file
+    download $file $P $artifact $version
     if [ -f ../$artifact/$file ]; then
       cp ../$artifact/$file $file
     fi
     mvnInstallFile $file $file $artifact
   else
     file=$artifact-$version.jar
-    curl -s -o ../$file $P/$artifact/$version/$file
+    download ../$file $P $artifact $version
     jar -xf ../$file
     if [ $artifact = hilla-maven-plugin ]; then
       old=$N:$artifact
-      N=vaadin.com
+      N=com.vaadin
       artifact=vaadin-maven-plugin
       file=$artifact-$version.jar
       renameArtifact $old $N:$artifact
